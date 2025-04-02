@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de países</title>
+    <style>
+        body{
+            background-color: darkkhaki;
+        
+        }
+        h1{
+            color: aliceblue;
+           
+        }
+
+        p{
+            color: whitesmoke;
+            font-size: 22px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Qual seu país?</h1>
+    <p>Digite seu país:</p> <input type="text" name="text" id="text">
+    <input type="button" value="Analisar" onclick="analisar()">
+    <div id="res"></div>
+
+    <script>
+        function analisar() {
+            var text = document.getElementById('text');
+            var res = document.getElementById('res');
+            var pais = text.value.toLowerCase(); // Convertendo o texto para minúsculas para evitar problemas de comparação
+            res.innerHTML = `<p>Seu país é <strong>${pais}</strong></p>`;
+            if (pais !== 'brasil') {
+                res.innerHTML += '<p>Você é estrangeiro</p>';
+            } else {
+                res.innerHTML += '<p>Você é brasileiro</p>';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de paises</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Qual seu país ?</h1>
+    Digite seu país: <input type="text" name="text" id="text">
+    <input type="button" value="analisar">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function analisar() {
+            var text = document.getElementById('text')
+            var res = document.getElementById('res')
+            var res = document.getElementById('pais')
+            res.innerHTML = <p>Seu país é <strong>${pais}</strong></p>
+            if (res != brasil) {
+                res.innerHTML += '<p>Você é estrangeiro</p>'
+
+            } 
+            res.innerHTML += '<p>Você é brasileiro</p>'
+
+
+        }
+
+
+    </script>
+
+
+    
+</body>
+</html>-->
